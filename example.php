@@ -1,6 +1,7 @@
 
 <?php
-require __DIR__. "/fileHandle.php" 
+require __DIR__. "/fileHandle.php";
+ 
 $images = "";
 
     if (isset($_FILES['images']) && !empty(trim($_FILES['images']['name'][0]))) {
