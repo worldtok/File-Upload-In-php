@@ -1,5 +1,6 @@
 
 <?php
+require __DIR__. "/fileHandle.php" 
 $images = "";
 
     if (isset($_FILES['images']) && !empty(trim($_FILES['images']['name'][0]))) {
@@ -15,7 +16,7 @@ $images = "";
 
 
             for ($i = 0; $i < count($file_names); $i++) {
-                $images .= '<img class="inbox-image" src="/storage/' . File::upload(
+                $images .= '<img class="inbox-image" src="/storage/' . upload(
                     [
                         'name' => $file_names[$i],
                         'type' => $file_types[$i],
